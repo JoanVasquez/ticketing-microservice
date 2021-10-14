@@ -4,26 +4,6 @@ import { natsWrapper } from "./nats.wrapper";
 import { OrderCreatedListener } from "./events/listener/order.created.listener";
 import { OrderCancelledListener } from "./events/listener/order.cancelled.listener";
 
-// if (!process.env.JWT_KEY) {
-//   throw throwError(500, "JWT Key must be define");
-// }
-
-// if (!process.env.MONGO_URI) {
-//   throw throwError(500, "MONGO URI must be defined");
-// }
-
-// if (!process.env.NATS_CLIENT_ID) {
-//   throw throwError(500, "MONGO URI must be defined");
-// }
-
-// if (!process.env.NATS_URL) {
-//   throw throwError(500, "MONGO URI must be defined");
-// }
-
-// if (!process.env.NATS_CLUSTER_ID) {
-//   throw throwError(500, "MONGO URI must be defined");
-// }
-
 async function start() {
   await natsWrapper.connect(
     process.env.NATS_CLUSTER_ID,
