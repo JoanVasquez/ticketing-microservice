@@ -7,6 +7,7 @@ import { ExpirationCompleteListener } from "./events/listener/expiration.complet
 import { PaymentCreatedListener } from "./events/listener/payment.created.listener";
 
 async function start() {
+  console.log("Starting...");
   await natsWrapper.connect(
     process.env.NATS_CLUSTER_ID,
     process.env.NATS_CLIENT_ID,
